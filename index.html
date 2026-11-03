@@ -1,1 +1,917 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rifqi Fausta Dianta — E-Portfolio PPL Mandiri SMAN 6 Yogyakarta</title>
 
+  <!-- Google Fonts: Inter & Newsreader -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0a0a0a',
+            charcoal: '#1c1c1c',
+            'gray-dark': '#333333',
+            'gray-mid': '#6b6b6b',
+            'gray-light': '#c8c8c8',
+            'gray-faint': '#e6e4de',
+            paper: '#fdfcfb',
+            'paper-warm': '#f6f4ee',
+            'paper-card': '#faf9f5',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['Newsreader', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.22;
+      background-image: 
+        radial-gradient(circle at 15% 25%, rgba(0,0,0,0.02) 0, transparent 40%),
+        radial-gradient(circle at 85% 75%, rgba(0,0,0,0.02) 0, transparent 40%);
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-paper text-ink font-sans antialiased selection:bg-ink selection:text-paper min-h-screen flex flex-col text-[1rem] leading-[1.65]">
+
+  <!-- STICKY NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-paper/95 backdrop-blur-md border-b border-gray-faint px-[1.25rem] sm:px-[2rem] lg:px-[3.75rem] py-[1rem]">
+    <div class="max-w-[77.5rem] mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-[0.75rem]">
+      <a href="#beranda" class="font-black text-[0.85rem] tracking-[0.08em] uppercase text-ink">
+        Rifqi Fausta Dianta <span class="font-normal text-gray-mid ml-[0.35rem]">E-Portfolio PPL Mandiri</span>
+      </a>
+      <nav aria-label="Navigasi Utama">
+        <ul class="flex flex-wrap items-center gap-[1rem] sm:gap-[1.5rem] text-[0.72rem] font-bold tracking-[0.06em] uppercase text-charcoal">
+          <li><a href="#beranda" class="hover:text-ink pb-[0.25rem] border-b-2 border-transparent hover:border-ink transition-all">01. Beranda</a></li>
+          <li><a href="#filosofi" class="hover:text-ink pb-[0.25rem] border-b-2 border-transparent hover:border-ink transition-all">02. Filosofi & Model Guru</a></li>
+          <li><a href="#artefak-ppl" class="hover:text-ink pb-[0.25rem] border-b-2 border-transparent hover:border-ink transition-all">03. Artefak & Analisis (UTS/UAS)</a></li>
+          <li><a href="#refleksi-akhir" class="hover:text-ink pb-[0.25rem] border-b-2 border-transparent hover:border-ink transition-all">04. Refleksi Akhir & RTL</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- ==================== 01. BERANDA (HOMEPAGE) ==================== -->
+    <section id="beranda" class="border-b border-gray-faint px-[1.25rem] sm:px-[2rem] lg:px-[3.75rem] py-[3.25rem] sm:py-[4.75rem] lg:py-[6rem]">
+      <div class="max-w-[77.5rem] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-[2.5rem] lg:gap-[4rem] items-center">
+        
+        <!-- Kolom Kiri: Pengantar & Kontak -->
+        <div class="lg:col-span-8 flex flex-col items-start">
+          <span class="inline-block text-[0.68rem] font-extrabold tracking-[0.14em] uppercase border border-ink px-[0.85rem] py-[0.35rem] mb-[1.5rem] bg-paper-warm text-charcoal">
+            PPL Mandiri · SMAN 6 Yogyakarta · 2026
+          </span>
+          <h1 class="text-[2.5rem] sm:text-[3.75rem] lg:text-[5rem] font-extrabold leading-[1.02] tracking-[-0.04em] text-ink">
+            Praktik Reflektif,<br>
+            <em class="font-serif italic font-normal text-gray-mid">Menuntun Nalar Matematis.</em>
+          </h1>
+          
+          <p class="text-[1rem] sm:text-[1.08rem] leading-[1.75] text-gray-dark max-w-[42rem] mt-[1.5rem]">
+            Selamat datang di portal <strong>E-Portfolio Praktik Pengalaman Lapangan (PPL) Mandiri</strong>. Situs ini mendokumentasikan secara sistematis perjalanan profesional saya sebagai calon guru Matematika di <strong>SMAN 6 Yogyakarta</strong>—mulai dari observasi ekosistem sekolah, praktik mengajar terbimbing, hingga pelaksanaan empat siklus mengajar mandiri untuk pemenuhan tugas <strong>Ujian Tengah Semester (E-Portfolio 1)</strong> dan <strong>Ujian Akhir Semester (E-Portfolio 2)</strong>.
+          </p>
+
+          <!-- Metadata Grid -->
+          <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-[1rem] mt-[2rem] pt-[1.75rem] border-t border-gray-faint">
+            <div>
+              <span class="text-[0.68rem] font-bold uppercase tracking-[0.12em] text-gray-mid block">Identitas Mahasiswa</span>
+              <p class="text-[0.95rem] font-bold text-ink mt-[0.2rem]">Rifqi Fausta Dianta (NIM: 251415046)</p>
+              <p class="text-[0.85rem] text-gray-dark">PPG Calon Guru Matematika — Universitas Sanata Dharma</p>
+            </div>
+            <div>
+              <span class="text-[0.68rem] font-bold uppercase tracking-[0.12em] text-gray-mid block">Pendamping Akademik & Lapangan</span>
+              <p class="text-[0.9rem] font-semibold text-ink mt-[0.2rem]">DPL: Veronika Fitri Rianasari, Ph.D.</p>
+              <p class="text-[0.9rem] font-semibold text-ink">Guru Pamong: Sri Lestari, S.Pd.</p>
+            </div>
+          </div>
+
+          <!-- Kontak & Navigasi Cepat -->
+          <div class="flex flex-wrap items-center gap-[0.85rem] mt-[2rem]">
+            <a href="#artefak-ppl" class="inline-flex items-center gap-[0.5rem] text-[0.75rem] font-bold tracking-[0.08em] uppercase bg-ink text-paper px-[1.35rem] py-[0.8rem] rounded-[0.125rem] hover:bg-charcoal transition-all">
+              Eksplorasi Artefak PPL ↓
+            </a>
+            <a href="mailto:rifqia48@gmail.com" class="inline-flex items-center gap-[0.5rem] text-[0.75rem] font-bold tracking-[0.06em] uppercase border border-ink bg-paper-warm text-ink px-[1.15rem] py-[0.8rem] rounded-[0.125rem] hover:bg-ink hover:text-paper transition-all">
+              Email: rifqia48@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/rifqi-fausta-dianta-457130178/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-[0.5rem] text-[0.75rem] font-bold tracking-[0.06em] uppercase border border-ink bg-paper-warm text-ink px-[1.15rem] py-[0.8rem] rounded-[0.125rem] hover:bg-ink hover:text-paper transition-all">
+              LinkedIn Profile ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Kolom Kanan: Foto Profil Tunggal (image.png) -->
+        <div class="lg:col-span-4 w-full max-w-[21rem] mx-auto lg:max-w-none">
+          <div class="bg-paper-warm border border-gray-faint p-[0.85rem] rounded-[0.25rem]">
+            <img 
+              src="image.png" 
+              alt="Foto Profil Rifqi Fausta Dianta" 
+              class="w-full aspect-[4/5] object-cover rounded-[0.125rem] grayscale contrast-[1.05] hover:grayscale-0 transition-all duration-500 block"
+            >
+            <div class="pt-[0.85rem] pb-[0.25rem] flex justify-between items-baseline border-t border-gray-faint mt-[0.75rem]">
+              <span class="text-[0.75rem] font-extrabold uppercase tracking-[0.06em] text-ink">Rifqi Fausta Dianta</span>
+              <span class="text-[0.68rem] font-semibold uppercase tracking-[0.08em] text-gray-mid">Matematika · 2026</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 02. FILOSOFI & MODEL GURU ==================== -->
+    <section id="filosofi" class="border-b border-gray-faint bg-paper-warm px-[1.25rem] sm:px-[2rem] lg:px-[3.75rem] py-[3.5rem] sm:py-[5rem]">
+      <div class="max-w-[77.5rem] mx-auto">
+        <span class="text-[0.68rem] font-bold tracking-[0.16em] uppercase text-gray-mid block mb-[0.5rem]">
+          02 / Identitas Profesional Pendidik
+        </span>
+        <div class="w-[2.75rem] h-[0.125rem] bg-ink mb-[1.5rem]"></div>
+        <h2 class="text-[1.85rem] sm:text-[2.5rem] font-extrabold tracking-[-0.03em] text-ink mb-[2.25rem]">
+          Model Guru yang Dituju & Filosofi Mengajar
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-[2rem] lg:gap-[3rem]">
+          <!-- Model Guru yang Dituju -->
+          <div class="bg-paper border border-gray-faint p-[1.75rem] sm:p-[2.25rem] rounded-[0.125rem]">
+            <span class="inline-block text-[0.65rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.6rem] py-[0.25rem] mb-[1rem]">
+              Model Guru yang Dituju
+            </span>
+            <h3 class="text-[1.35rem] font-bold text-ink mb-[0.85rem]">
+              Perancang Pengalaman Belajar (*Learning Designer*) yang Humanis, Inklusif, dan Reflektif
+            </h3>
+            <p class="text-[0.96rem] text-charcoal leading-[1.75] mb-[1rem]">
+              Sosok guru yang saya tuju bukanlah penceramah tunggal yang sekadar memindahkan rumus ke papan tulis, melainkan seorang <strong>fasilitator konstruksi nalar</strong> yang peka terhadap kesiapan kognitif dan kondisi sosial-emosional murid. Saya berkomitmen menjadi guru matematika yang menghadirkan ruang kelas aman dari rasa takut salah (*psychologically safe*), merancang *scaffolding* adaptif sesuai kapasitas murid, serta mengintegrasikan teknologi dan konteks nyata agar matematika bermakna bagi kehidupan mereka.
+            </p>
+            <p class="text-[0.96rem] text-charcoal leading-[1.75]">
+              Kesiapan ini juga diwujudkan melalui komitmen inklusivitas nyata—termasuk menyesuaikan aksesibilitas visual media ajar di kelas serta mempelajari dasar Bahasa Isyarat Indonesia (BISINDO) dan huruf Braille agar siap merangkul keberagaman peserta didik tanpa terkecuali.
+            </p>
+          </div>
+
+          <!-- Filosofi Mengajar -->
+          <div class="bg-paper border border-gray-faint p-[1.75rem] sm:p-[2.25rem] rounded-[0.125rem]">
+            <span class="inline-block text-[0.65rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.6rem] py-[0.25rem] mb-[1rem]">
+              Filosofi Mengajar
+            </span>
+            <h3 class="text-[1.35rem] font-bold text-ink mb-[0.85rem]">
+              Menuntun Kodrat Anak Melalui *Deep Learning* & Pemberdayaan Kemandirian
+            </h3>
+            <p class="text-[0.96rem] text-charcoal leading-[1.75] mb-[1rem]">
+              Berpijak pada pemikiran <strong>Ki Hadjar Dewantara (Sistem Among)</strong>, saya meyakini bahwa murid bukanlah lembaran kosong (*tabula rasa*). Pendidik diibaratkan sebagai petani yang merawat tumbuhnya benih sesuai kodrat alam dan kodrat zamannya. Wibawa guru tidak dibangun dari ancaman atau hukuman, melainkan melalui keteladanan (*Ing Ngarsa Sung Tuladha*), pembangunan karsa (*Ing Madya Mangun Karsa*), dan dorongan kemandirian (*Tut Wuri Handayani*).
+            </p>
+            <p class="text-[0.96rem] text-charcoal leading-[1.75]">
+              Dalam pembelajaran matematika, filosofi ini saya terjemahkan ke dalam kerangka <strong>Deep Learning (*Mindful, Meaningful, Joyful*)</strong>: menghadirkan kesadaran penuh melalui regulasi emosi (Teknik STOP), mengaitkan konsep abstrak dengan masalah kontekstual yang dekat dengan murid, serta menghargai setiap proses bertumbuh (*process-praise* & *The Power of Yet*).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 03. ARTEFAK & ANALISIS MENDALAM ==================== -->
+    <section id="artefak-ppl" class="border-b border-gray-faint px-[1.25rem] sm:px-[2rem] lg:px-[3.75rem] py-[3.5rem] sm:py-[5.5rem]">
+      <div class="max-w-[77.5rem] mx-auto">
+        
+        <div class="mb-[2.25rem]">
+          <span class="text-[0.68rem] font-bold tracking-[0.16em] uppercase text-gray-mid block mb-[0.5rem]">
+            03 / Dokumentasi Bukti Mengajar & Kajian Teori
+          </span>
+          <div class="w-[2.75rem] h-[0.125rem] bg-ink mb-[1.5rem]"></div>
+          <h2 class="text-[1.85rem] sm:text-[2.65rem] font-extrabold tracking-[-0.035em] text-ink">
+            Galeri Artefak & Analisis Praktik PPL Mandiri
+          </h2>
+          <p class="text-gray-dark text-[0.98rem] max-w-[46rem] mt-[0.65rem]">
+            Pilih tab di bawah ini untuk meninjau hasil observasi lingkungan sekolah, refleksi terbimbing, serta perangkat lengkap dan analisis kritis artefak untuk <strong>UTS (Siklus 1)</strong> maupun <strong>UAS (Siklus 2 s.d. 4)</strong>.
+          </p>
+        </div>
+
+        <!-- MAIN TABS BAR -->
+        <div class="flex overflow-x-auto no-scrollbar gap-[0.65rem] border-b border-gray-faint pb-[1rem] mb-[2.5rem]" role="tablist">
+          <button onclick="switchMainTab('uts')" id="mbtn-uts" class="main-tab-btn px-[1.25rem] py-[0.8rem] border border-ink bg-ink text-paper text-[0.74rem] font-bold tracking-[0.08em] uppercase whitespace-nowrap rounded-[0.125rem] transition-all">
+            01 / E-Portfolio 1: UTS (Siklus Mandiri 1)
+          </button>
+          <button onclick="switchMainTab('uas')" id="mbtn-uas" class="main-tab-btn px-[1.25rem] py-[0.8rem] border border-gray-faint bg-paper-warm text-charcoal hover:border-ink text-[0.74rem] font-bold tracking-[0.08em] uppercase whitespace-nowrap rounded-[0.125rem] transition-all">
+            02 / E-Portfolio 2: UAS (Siklus Mandiri 2–4)
+          </button>
+          <button onclick="switchMainTab('fondasi')" id="mbtn-fondasi" class="main-tab-btn px-[1.25rem] py-[0.8rem] border border-gray-faint bg-paper-warm text-charcoal hover:border-ink text-[0.74rem] font-bold tracking-[0.08em] uppercase whitespace-nowrap rounded-[0.125rem] transition-all">
+            03 / Fondasi PPL: Observasi (LK 2) & Terbimbing (LK 3)
+          </button>
+        </div>
+
+        <!-- ========================================================================= -->
+        <!-- PANEL 1: UTS (E-PORTFOLIO 1 — SIKLUS MANDIRI 1)                           -->
+        <!-- ========================================================================= -->
+        <div id="mpanel-uts" class="main-tab-panel block space-y-[2.75rem]">
+          
+          <!-- Banner Konteks Siklus 1 -->
+          <div class="bg-paper-warm border border-gray-faint p-[1.75rem] sm:p-[2.25rem] rounded-[0.125rem]">
+            <div class="flex flex-wrap justify-between items-start gap-[1rem] border-b border-gray-faint pb-[1.25rem] mb-[1.25rem]">
+              <div>
+                <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.14em] text-gray-mid block">Ujian Tengah Semester · Praktik Mengajar Mandiri Siklus 1</span>
+                <h3 class="text-[1.5rem] sm:text-[1.85rem] font-extrabold text-ink mt-[0.25rem]">
+                  Topik: Fungsi Komposisi (Pemetaan Tiga Himpunan & Syarat Komposisi)
+                </h3>
+              </div>
+              <a href="#GANTI-LINK-LK4-SIKLUS1" target="_blank" class="text-[0.74rem] font-bold uppercase tracking-[0.06em] bg-ink text-paper px-[1rem] py-[0.6rem] rounded-[0.125rem] hover:bg-charcoal transition-all">
+                Dokumen LK 4 Siklus 1 (PDF) ↗
+              </a>
+            </div>
+            <p class="text-[0.96rem] text-charcoal leading-[1.75]">
+              Siklus Mandiri 1 dilaksanakan dengan memadukan pendekatan <strong>Pembelajaran Sosial-Emosional (PSE) teknik STOP</strong> (hening sejenak 2 menit), analogi visual konkret (mesin pengolah padi $\rightarrow$ beras $\rightarrow$ nasi), dan diskusi kelompok kecil heterogen berbantuan <strong>tutor sebaya (*peer tutor*) multimodal</strong> untuk melacak alur pemetaan tiga himpunan serta syarat keberadaan fungsi komposisi.
+            </p>
+          </div>
+
+          <!-- 4 ARTEFAK INTI & ANALISIS MENDALAM SIKLUS 1 -->
+          <div class="space-y-[2rem]">
+            <h4 class="text-[1.25rem] font-extrabold uppercase tracking-[0.04em] text-ink border-l-[4px] border-ink pl-[0.85rem]">
+              Daftar Artefak Terbaik Siklus 1 & Analisis Kajian Teori
+            </h4>
+
+            <!-- Artefak 1.1: RPP / Modul Ajar (RPM) -->
+            <div class="border border-gray-faint bg-paper p-[1.5rem] sm:p-[2rem] rounded-[0.125rem]">
+              <div class="flex flex-wrap justify-between items-center gap-[1rem] pb-[1rem] border-b border-gray-faint">
+                <div>
+                  <span class="text-[0.65rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.55rem] py-[0.2rem]">Artefak 01 · Perencanaan</span>
+                  <h5 class="text-[1.25rem] font-bold text-ink mt-[0.4rem]">Rancangan Pembelajaran Mandiri (RPM) Siklus 1 — Fungsi Komposisi</h5>
+                </div>
+                <a href="#GANTI-LINK-RPM-SIKLUS1" target="_blank" class="text-[0.75rem] font-bold uppercase tracking-[0.06em] border border-ink px-[1rem] py-[0.55rem] hover:bg-ink hover:text-paper transition-all">
+                  Buka Dokumen RPM Siklus 1 ↗
+                </a>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem] mt-[1.25rem]">
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Konteks & Tujuan Artefak</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Disusun sebagai tindak lanjut evaluasi siklus terbimbing (memadatkan manajemen waktu dan membangun keakraban kelas). Bertujuan memandu murid memahami proses berantai fungsi komposisi $(g \circ f)(x)$ serta mengidentifikasi syarat irisan daerah hasil fungsi pertama dengan daerah asal fungsi kedua ($R_f \cap D_g \neq \emptyset$).
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kajian Teori Mata Kuliah Terintegrasi</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Mengintegrasikan mata kuliah <strong>PPDP</strong> (Teori Konstruktivisme Piaget: menjembatani konsep abstrak melalui analogi konkret mesin produksi; Sosiokultural Vygotsky: pemberdayaan ZPD melalui tutor sebaya) serta <strong>PSE CASEL</strong> (kesadaran diri dan manajemen diri melalui teknik STOP di awal pembelajaran).
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kelebihan Produk</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Alur kegiatan dirancang sangat sistematis dengan memadukan kesiapan psikologis (STOP), jembatan analogi sehari-hari yang intuitif, pembagian kelompok heterogen terukur, hingga penarikan kesimpulan reflektif mandiri (*Assessment as Learning*).
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kekurangan Produk & Evaluasi</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Rancangan belum dilengkapi instrumen pengecekan mandiri (*self-check guide*) tertulis bagi siswa dan panduan afirmasi spesifik bagi tutor sebaya, sehingga murid masih sering ragu dan bergantung pada konfirmasi lisan guru di setiap langkah.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Artefak 1.2: Media Pembelajaran Salindia -->
+            <div class="border border-gray-faint bg-paper p-[1.5rem] sm:p-[2rem] rounded-[0.125rem]">
+              <div class="flex flex-wrap justify-between items-center gap-[1rem] pb-[1rem] border-b border-gray-faint">
+                <div>
+                  <span class="text-[0.65rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.55rem] py-[0.2rem]">Artefak 02 · Media Ajar</span>
+                  <h5 class="text-[1.25rem] font-bold text-ink mt-[0.4rem]">Salindia Interaktif Analogi Mesin Produksi & Skema Diagram Panah Tiga Himpunan</h5>
+                </div>
+                <a href="#GANTI-LINK-MEDIA-SIKLUS1" target="_blank" class="text-[0.75rem] font-bold uppercase tracking-[0.06em] border border-ink px-[1rem] py-[0.55rem] hover:bg-ink hover:text-paper transition-all">
+                  Buka Media Salindia Siklus 1 ↗
+                </a>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem] mt-[1.25rem]">
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Konteks & Tujuan Artefak</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Digunakan sebagai panduan visual utama di kelas untuk mengilustrasikan proses input-output bertahap (padi menjadi beras, beras menjadi nasi) dan memandu langkah investigasi kelompok di buku catatan masing-masing.
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kajian Teori Mata Kuliah Terintegrasi</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Mengaplikasikan prinsip <strong>PMAL (Desain Universal Pembelajaran / UDL)</strong> melalui *Multiple Means of Representation* (visualisasi skema mesin dan diagram panah) serta prinsip <strong>Teknologi Baru dalam Pengajaran</strong> untuk memstrukturkan alur inkuiri kelas.
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kelebihan Produk</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Ilustrasi visual skema mesin dan diagram panah sangat efektif mempermudah murid menangkap konsep abstrak bahwa keluaran fungsi pertama menjadi masukan bagi fungsi kedua.
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kekurangan Produk & Evaluasi</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Ukuran *font* pada beberapa bagian teks penjelasan dan soal di salindia masih terlalu kecil serta kepadatan teks per slide cukup tinggi. Hal ini menyulitkan murid di barisan tengah hingga belakang (khususnya yang bermata minus) untuk membaca instruksi dengan jelas.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Artefak 1.3: Video Praktik Mengajar Siklus 1 -->
+            <div class="border border-gray-faint bg-paper p-[1.5rem] sm:p-[2rem] rounded-[0.125rem]">
+              <div class="flex flex-wrap justify-between items-center gap-[1rem] pb-[1rem] border-b border-gray-faint">
+                <div>
+                  <span class="text-[0.65rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.55rem] py-[0.2rem]">Artefak 03 · Video Pelaksanaan</span>
+                  <h5 class="text-[1.25rem] font-bold text-ink mt-[0.4rem]">Rekaman Video Praktik Mengajar Mandiri Siklus 1</h5>
+                </div>
+                <a href="#GANTI-LINK-VIDEO-SIKLUS1" target="_blank" class="text-[0.75rem] font-bold uppercase tracking-[0.06em] border border-ink px-[1rem] py-[0.55rem] hover:bg-ink hover:text-paper transition-all">
+                  Tonton Video Mengajar Siklus 1 ↗
+                </a>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem] mt-[1.25rem]">
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Konteks & Tujuan Artefak</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Dokumentasi autentik pelaksanaan pembelajaran Siklus 1 dari tahap pembukaan (hening sejenak STOP & apersepsi), fasilitasi diskusi kelompok, presentasi murid di papan tulis, hingga penutupan reflektif.
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kajian Teori Mata Kuliah Terintegrasi</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Mencerminkan penerapan <strong>Filosofi Pendidikan Ki Hadjar Dewantara</strong> (menuntun antusiasme murid tanpa paksaan), <strong>PSE</strong> (mengubah kecanggungan awal menjadi fokus belajar dan *productive noise*), serta <strong>Growth Mindset</strong> (*process-praise* saat murid maju ke depan kelas).
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kelebihan Praktik dalam Video</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Iklim kelas berubah jauh lebih cair dibanding siklus terbimbing; antusiasme murid memuncak saat berebut maju ke papan tulis untuk menuliskan diagram panah dan alur penyelesaian kelompoknya.
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kekurangan Praktik dalam Video</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Saat berkeliling membimbing kelompok, guru terkadang masih langsung memberikan validasi "benar/salah" atas pertanyaan murid, alih-alih melontarkan pertanyaan pemantik balik (*probing questions*) untuk membangun efikasi diri murid.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Artefak 1.4: Hasil Kerja Siswa & Refleksi Mandiri -->
+            <div class="border border-gray-faint bg-paper p-[1.5rem] sm:p-[2rem] rounded-[0.125rem]">
+              <div class="flex flex-wrap justify-between items-center gap-[1rem] pb-[1rem] border-b border-gray-faint">
+                <div>
+                  <span class="text-[0.65rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.55rem] py-[0.2rem]">Artefak 04 · Bukti Belajar Murid</span>
+                  <h5 class="text-[1.25rem] font-bold text-ink mt-[0.4rem]">Sampel Catatan Investigasi Kelompok & Kotak "Kesimpulan Penting Hari Ini"</h5>
+                </div>
+                <a href="#GANTI-LINK-KARYA-SIKLUS1" target="_blank" class="text-[0.75rem] font-bold uppercase tracking-[0.06em] border border-ink px-[1rem] py-[0.55rem] hover:bg-ink hover:text-paper transition-all">
+                  Lihat Hasil Kerja Murid Siklus 1 ↗
+                </a>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem] mt-[1.25rem]">
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Konteks & Tujuan Artefak</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Kumpulan hasil pengerjaan murid di buku tulis yang memuat pelacakan diagram panah tiga himpunan, perumusan fungsi komposisi, serta rangkuman metakognitif pada kotak "Kesimpulan Penting Hari Ini".
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kajian Teori Mata Kuliah Terintegrasi</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Mengaplikasikan konsep <strong>PMAL (*Assessment for Learning* & *Assessment as Learning*)</strong> di mana murid menilai dan menyarikan sendiri pemahaman esensialnya di akhir sesi belajar.
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kelebihan Artefak</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Menunjukkan keterlibatan kognitif yang utuh; murid mampu menuliskan langkah penyelesaian secara runtut dan merumuskan simpulan dengan bahasa mereka sendiri secara reflektif.
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kekurangan Artefak</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Karena dikerjakan langsung di buku catatan masing-masing merujuk layar salindia (tanpa lembar kerja cetak terstruktur), beberapa murid sempat lambat menyalin skema awal akibat kendala keterbacaan font slide dari belakang kelas.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ========================================================================= -->
+        <!-- PANEL 2: UAS (E-PORTFOLIO 2 — SIKLUS MANDIRI 2 s.d. 4)                    -->
+        <!-- ========================================================================= -->
+        <div id="mpanel-uas" class="main-tab-panel hidden space-y-[2.5rem]">
+          
+          <!-- Sub-Tab Selector untuk Siklus 2, 3, dan 4 -->
+          <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+            <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.14em] text-gray-mid block mb-[0.75rem]">
+              Ujian Akhir Semester (E-Portfolio 2) · Pilih Rincian Siklus Mandiri 2 s.d. 4:
+            </span>
+            <div class="flex flex-wrap gap-[0.6rem]">
+              <button onclick="switchUasSubTab('siklus2')" id="uasbtn-siklus2" class="uas-sub-btn px-[1.1rem] py-[0.6rem] text-[0.72rem] font-bold uppercase tracking-[0.06em] bg-ink text-paper border border-ink rounded-[0.125rem] transition-all">
+                Siklus 2: Fungsi Invers
+              </button>
+              <button onclick="switchUasSubTab('siklus3')" id="uasbtn-siklus3" class="uas-sub-btn px-[1.1rem] py-[0.6rem] text-[0.72rem] font-bold uppercase tracking-[0.06em] bg-paper text-charcoal border border-gray-faint hover:border-ink rounded-[0.125rem] transition-all">
+                Siklus 3: Konsep & Perkalian Matriks
+              </button>
+              <button onclick="switchUasSubTab('siklus4')" id="uasbtn-siklus4" class="uas-sub-btn px-[1.1rem] py-[0.6rem] text-[0.72rem] font-bold uppercase tracking-[0.06em] bg-paper text-charcoal border border-gray-faint hover:border-ink rounded-[0.125rem] transition-all">
+                Siklus 4: Determinan, Invers Matriks & SPLDV (Karhutla)
+              </button>
+            </div>
+          </div>
+
+          <!-- Detail Per Siklus (LK 4 Siklus 2, 3, 4) -->
+          <!-- SUB-PANEL SIKLUS 2 -->
+          <div id="uaspanel-siklus2" class="uas-sub-panel block bg-paper border border-gray-faint p-[1.75rem] sm:p-[2.25rem]">
+            <div class="flex flex-wrap justify-between items-start gap-[1rem] border-b border-gray-faint pb-[1rem] mb-[1.25rem]">
+              <div>
+                <span class="text-[0.65rem] font-extrabold uppercase tracking-[0.12em] text-gray-mid">Refleksi Praktik Mandiri Ke-2</span>
+                <h3 class="text-[1.45rem] font-extrabold text-ink">Siklus 2: Fungsi Invers (Analogi Enkripsi-Dekripsi Sandi Rahasia)</h3>
+              </div>
+              <a href="#GANTI-LINK-LK4-SIKLUS2" target="_blank" class="text-[0.72rem] font-bold uppercase tracking-[0.06em] bg-ink text-paper px-[0.9rem] py-[0.5rem]">
+                Dokumen LK 4 Siklus 2 (PDF) ↗
+              </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem] text-[0.92rem]">
+              <div>
+                <h4 class="font-bold text-ink mb-[0.35rem]">1. Apersepsi & Perbaikan dari Siklus 1</h4>
+                <p class="text-charcoal leading-[1.65]">Pembiasaan teknik STOP di Siklus 2 berjalan jauh lebih rileks (sebagian besar murid sudah tidak canggung). Analogi "mengembalikan kode rahasia menjadi pesan semula" efektif menanamkan konsep fungsi invers sebagai pembalikan alur proses beserta syarat bijektifnya. Salindia telah diperbaiki dengan ukuran *font* besar dan kontras tinggi sehingga masalah keterbacaan Siklus 1 teratasi tuntas.</p>
+              </div>
+              <div>
+                <h4 class="font-bold text-ink mb-[0.35rem]">2. Keberhasilan & Temuan Kendala (Pemahaman Semu)</h4>
+                <p class="text-charcoal leading-[1.65]">LKM cetak dengan *scaffolding* bertahap dan tutor sebaya membuat murid percaya diri tanpa terus-menerus meminta validasi guru. Namun, saat asesmen harian individu ditemukan fenomena <strong>pemahaman semu</strong>: sebagian murid tampak lancar saat kerja kelompok karena mengikuti alur tutor sebaya, tetapi meraih nilai rendah ketika mengerjakan soal mandiri.</p>
+              </div>
+              <div class="md:col-span-2 bg-paper-warm p-[1.15rem] border border-gray-faint">
+                <h4 class="font-bold text-ink mb-[0.25rem]">3. Umpan Balik Guru Pamong & Rencana Perubahan</h4>
+                <p class="text-charcoal leading-[1.65]">Menyisipkan asesmen formatif individu berkesinambungan (*individual check for understanding* / *exit ticket* 1 soal) di tengah kegiatan inti, menerapkan *targeted scaffolding* pada murid rentan, serta mewajibkan murid non-tutor mengartikulasikan kembali langkah penyelesaian dengan kalimatnya sendiri (sintaks *Think-Pair-Share*).</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUB-PANEL SIKLUS 3 -->
+          <div id="uaspanel-siklus3" class="uas-sub-panel hidden bg-paper border border-gray-faint p-[1.75rem] sm:p-[2.25rem]">
+            <div class="flex flex-wrap justify-between items-start gap-[1rem] border-b border-gray-faint pb-[1rem] mb-[1.25rem]">
+              <div>
+                <span class="text-[0.65rem] font-extrabold uppercase tracking-[0.12em] text-gray-mid">Refleksi Praktik Mandiri Ke-3</span>
+                <h3 class="text-[1.45rem] font-extrabold text-ink">Siklus 3: Notasi, Ordo, & Operasi Perkalian Matriks</h3>
+              </div>
+              <a href="#GANTI-LINK-LK4-SIKLUS3" target="_blank" class="text-[0.72rem] font-bold uppercase tracking-[0.06em] bg-ink text-paper px-[0.9rem] py-[0.5rem]">
+                Dokumen LK 4 Siklus 3 (PDF) ↗
+              </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem] text-[0.92rem]">
+              <div>
+                <h4 class="font-bold text-ink mb-[0.35rem]">1. Apersepsi Data Koperasi & Penguasaan Konsep Dasar</h4>
+                <p class="text-charcoal leading-[1.65]">Apersepsi menyajikan tabel data penjualan koperasi sekolah tanpa label. Karena matriks adalah materi baru di Fase F, murid sempat bingung di awal sebelum akhirnya memahami urgensi aturan posisi baris-kolom. Konsep dasar baris, kolom, dan ordo matriks berhasil dikuasai dengan sangat cepat melalui LKM cetak berverifikasi bertahap.</p>
+              </div>
+              <div>
+                <h4 class="font-bold text-ink mb-[0.35rem]">2. Kendala Ketelitian Prosedural Perkalian Matriks</h4>
+                <p class="text-charcoal leading-[1.65]">Seluruh murid fokus dan aktif mengerjakan LKM tanpa ada yang pasif. Kendala utama muncul saat masuk ke operasi perkalian dua matriks yang menuntut ketelitian tinggi (syarat kesesuaian ordo dan perkalian baris kali kolom secara berantai), di mana banyak murid keliru tanda atau salah memasangkan elemen.</p>
+              </div>
+              <div class="md:col-span-2 bg-paper-warm p-[1.15rem] border border-gray-faint">
+                <h4 class="font-bold text-ink mb-[0.25rem]">3. Umpan Balik Guru Pamong & Rencana Perubahan</h4>
+                <p class="text-charcoal leading-[1.65]">Menggunakan pendekatan penemuan terbimbing (*guided discovery/inquiry*) agar murid menyimpulkan sendiri sifat operasi matriks (seperti sifat non-komutatif perkalian), serta menambahkan *scaffolding* visual (*visual-tracing* dengan kode warna/panah baris-kolom) dan latihan bergradasi mulai dari ordo $2\times 2$.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUB-PANEL SIKLUS 4 -->
+          <div id="uaspanel-siklus4" class="uas-sub-panel hidden bg-paper border border-gray-faint p-[1.75rem] sm:p-[2.25rem]">
+            <div class="flex flex-wrap justify-between items-start gap-[1rem] border-b border-gray-faint pb-[1rem] mb-[1.25rem]">
+              <div>
+                <span class="text-[0.65rem] font-extrabold uppercase tracking-[0.12em] text-gray-mid">Refleksi Praktik Mandiri Ke-4</span>
+                <h3 class="text-[1.45rem] font-extrabold text-ink">Siklus 4: Determinan, Invers Matriks & Pemodelan SPLDV (Konteks Karhutla)</h3>
+              </div>
+              <a href="#GANTI-LINK-LK4-SIKLUS4" target="_blank" class="text-[0.72rem] font-bold uppercase tracking-[0.06em] bg-ink text-paper px-[0.9rem] py-[0.5rem]">
+                Dokumen LK 4 Siklus 4 (PDF) ↗
+              </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem] text-[0.92rem]">
+              <div>
+                <h4 class="font-bold text-ink mb-[0.35rem]">1. Apersepsi Kontekstual Lintas Disiplin (Geografi & Ekonomi)</h4>
+                <p class="text-charcoal leading-[1.65]">Mengaitkan matriks dengan pemodelan bencana kebakaran hutan dan lahan (Karhutla) serta data spasial-finansial sangat efektif menarik minat murid Kelas XI F8 yang berlatar peminatan Geografi dan Ekonomi. Murid cepat menangkap urgensi matriks untuk menyelesaikan SPLDV.</p>
+              </div>
+              <div>
+                <h4 class="font-bold text-ink mb-[0.35rem]">2. Tantangan Dinamika Kelompok & Polarisasi Nilai</h4>
+                <p class="text-charcoal leading-[1.65]">Selama proyek poster infografis Karhutla dan *Gallery Walk*, beban kerja di beberapa kelompok hanya bertumpu pada murid tertentu. Dampaknya terlihat tajam saat asesmen sumatif mandiri: murid yang aktif meraih nilai sempurna, sedangkan anggota yang pasif memperoleh nilai sangat rendah.</p>
+              </div>
+              <div class="md:col-span-2 bg-paper-warm p-[1.15rem] border border-gray-faint">
+                <h4 class="font-bold text-ink mb-[0.25rem]">3. Umpan Balik Guru Pamong & Rencana Perubahan</h4>
+                <p class="text-charcoal leading-[1.65]">Memberikan simulasi/*role model* aturan rotasi stasiun *Gallery Walk* secara eksplisit di salindia sebelum sesi dimulai, serta menerapkan lembar akuntabilitas peran individu (*individual contribution sheet*), *peer-assessment*, dan kuis prasyarat individu agar tidak ada anggota yang lepas tanggung jawab.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 ARTEFAK INTI & ANALISIS MENDALAM UAS (SIKLUS 2–4 TERBAIK) -->
+          <div class="space-y-[2rem] pt-[1rem]">
+            <h4 class="text-[1.25rem] font-extrabold uppercase tracking-[0.04em] text-ink border-l-[4px] border-ink pl-[0.85rem]">
+              Artefak Terbaik Siklus 2 s.d. 4 & Analisis Kajian Teori (UAS)
+            </h4>
+
+            <!-- Artefak 2.1: RPM Terbaik Siklus 2-4 -->
+            <div class="border border-gray-faint bg-paper p-[1.5rem] sm:p-[2rem] rounded-[0.125rem]">
+              <div class="flex flex-wrap justify-between items-center gap-[1rem] pb-[1rem] border-b border-gray-faint">
+                <div>
+                  <span class="text-[0.65rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.55rem] py-[0.2rem]">Artefak 01 · Perencanaan Terbaik (Siklus 2–4)</span>
+                  <h5 class="text-[1.25rem] font-bold text-ink mt-[0.4rem]">Rancangan Pembelajaran Mandiri (RPM) Siklus 2–4</h5>
+                </div>
+                <a href="#GANTI-LINK-RPM-UAS" target="_blank" class="text-[0.75rem] font-bold uppercase tracking-[0.06em] border border-ink px-[1rem] py-[0.55rem] hover:bg-ink hover:text-paper transition-all">
+                  Buka Dokumen RPM UAS ↗
+                </a>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem] mt-[1.25rem]">
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Konteks & Tujuan Artefak</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Dirancang dengan menyempurnakan kelemahan Siklus 1 melalui penguatan struktur LKM bertahap, integrasi masalah kontekstual sesuai profil minat murid (sandi rahasia, data koperasi, hingga pemodelan Karhutla Geografi-Ekonomi), serta pemetaan kesiapan kognitif.
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kajian Teori Mata Kuliah Terintegrasi</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Memadukan <strong>PMAL (*Deep Learning* & *Culturally/Contextually Responsive Teaching*)</strong> yang mengaitkan matematika dengan latar peminatan murid, <strong>PPDP (*Teaching at the Right Level* & *Scaffolding Fading*)</strong>, serta <strong>PSE CASEL</strong> (keterampilan berelasi dan pengambilan keputusan bertanggung jawab).
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kelebihan Produk</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Konteks masalah sangat autentik dan dekat dengan dunia murid Fase F, dilengkapi tahapan *scaffolding* yang mereduksi ketergantungan murid terhadap validasi langsung guru.
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kekurangan Produk & Evaluasi</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Pada aktivitas kelompok dan *Gallery Walk*, pengaturan akuntabilitas individu (*individual check for understanding* di tengah sesi dan rubrik kontribusi per anggota) masih perlu diperketat agar tidak memicu kesenjangan pemahaman antara murid aktif dan murid pasif.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Artefak 2.2: Media Salindia Font 1.6x & LKM Bergradasi -->
+            <div class="border border-gray-faint bg-paper p-[1.5rem] sm:p-[2rem] rounded-[0.125rem]">
+              <div class="flex flex-wrap justify-between items-center gap-[1rem] pb-[1rem] border-b border-gray-faint">
+                <div>
+                  <span class="text-[0.65rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.55rem] py-[0.2rem]">Artefak 02 · Media & LKM Terstruktur</span>
+                  <h5 class="text-[1.25rem] font-bold text-ink mt-[0.4rem]">Salindia Aksesibilitas Tinggi & Lembar Kerja Murid (LKM) *Scaffolding* Bertahap</h5>
+                </div>
+                <a href="#GANTI-LINK-MEDIA-UAS" target="_blank" class="text-[0.75rem] font-bold uppercase tracking-[0.06em] border border-ink px-[1rem] py-[0.55rem] hover:bg-ink hover:text-paper transition-all">
+                  Buka Media & LKM UAS ↗
+                </a>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem] mt-[1.25rem]">
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Konteks & Tujuan Artefak</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Merupakan hasil redesain media ajar pasca-refleksi Siklus 1: menerapkan perbesaran ukuran *font* secara signifikan dan kontras visual tinggi pada salindia, dipadukan dengan LKM cetak yang memuat alur verifikasi nalar bertahap.
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kajian Teori Mata Kuliah Terintegrasi</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Mengaktualisasikan prinsip <strong>Desain Universal Pembelajaran (DUP / UDL)</strong> untuk aksesibilitas persepsi visual bagi seluruh murid di kelas, serta <strong>Teori Beban Kognitif (*Cognitive Load Theory*)</strong> pada penyusunan LKM yang memecah prosedur kompleks menjadi langkah terkelola.
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kelebihan Produk</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Mengatasi 100% kendala keterbacaan dari barisan belakang kelas dan sukses membangun kemandirian eksplorasi murid tanpa harus terus-menerus memanggil guru.
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kekurangan Produk & Evaluasi</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Pada materi operasi perkalian matriks (Siklus 3) dan aturan rotasi *Gallery Walk* (Siklus 4), media masih memerlukan tambahan panduan *visual-tracing* (kode warna baris-kolom) serta slide simulasi teknis rotasi stasiun yang lebih eksplisit.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Artefak 2.3: Video Praktik Mengajar Siklus 2-4 -->
+            <div class="border border-gray-faint bg-paper p-[1.5rem] sm:p-[2rem] rounded-[0.125rem]">
+              <div class="flex flex-wrap justify-between items-center gap-[1rem] pb-[1rem] border-b border-gray-faint">
+                <div>
+                  <span class="text-[0.65rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.55rem] py-[0.2rem]">Artefak 03 · Video Pelaksanaan (Siklus 2–4)</span>
+                  <h5 class="text-[1.25rem] font-bold text-ink mt-[0.4rem]">Rekaman Video Praktik Mengajar Mandiri Siklus Lanjut</h5>
+                </div>
+                <a href="#GANTI-LINK-VIDEO-UAS" target="_blank" class="text-[0.75rem] font-bold uppercase tracking-[0.06em] border border-ink px-[1rem] py-[0.55rem] hover:bg-ink hover:text-paper transition-all">
+                  Tonton Video Mengajar UAS ↗
+                </a>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem] mt-[1.25rem]">
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Konteks & Tujuan Artefak</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Menampilkan kematangan pengelolaan kelas pada siklus lanjut: pelaksanaan teknik STOP yang sudah terinternalisasi dengan tenang, penyampaian apersepsi kontekstual, bimbingan kelompok, hingga penutupan pembelajaran.
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kajian Teori Mata Kuliah Terintegrasi</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Mendemonstrasikan <strong>PPL Mandiri (*Teacher as Learning Designer*)</strong>, <strong>Growth Mindset</strong> (apresiasi ketekunan proses perhitungan aljabar murid), dan <strong>PSE</strong> (komunikasi asertif dan empatik selama mendampingi dinamika kelompok).
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kelebihan Praktik dalam Video</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Transisi antar-tahap pembelajaran berjalan jauh lebih terukur, interaksi guru-murid hangat dan natural, serta murid menunjukkan kemandirian berdiskusi bersama rekan/tutor sebayanya.
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kekurangan Praktik dalam Video</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Observasi guru saat kerja kelompok belum sepenuhnya menjangkau deteksi pemahaman individu secara merata pada anggota yang diam, serta instruksi teknis pergerakan kelompok saat kunjung karya perlu dimodelkan lebih awal.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Artefak 2.4: Hasil Kerja Murid (LKM, Poster Karhutla & Evaluasi) -->
+            <div class="border border-gray-faint bg-paper p-[1.5rem] sm:p-[2rem] rounded-[0.125rem]">
+              <div class="flex flex-wrap justify-between items-center gap-[1rem] pb-[1rem] border-b border-gray-faint">
+                <div>
+                  <span class="text-[0.65rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.55rem] py-[0.2rem]">Artefak 04 · Bukti Belajar & Asesmen</span>
+                  <h5 class="text-[1.25rem] font-bold text-ink mt-[0.4rem]">Sampel LKM Terbimbing, Poster Infografis SPLDV Matriks, & Hasil Asesmen</h5>
+                </div>
+                <a href="#GANTI-LINK-KARYA-UAS" target="_blank" class="text-[0.75rem] font-bold uppercase tracking-[0.06em] border border-ink px-[1rem] py-[0.55rem] hover:bg-ink hover:text-paper transition-all">
+                  Lihat Hasil Kerja Murid UAS ↗
+                </a>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem] mt-[1.25rem]">
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Konteks & Tujuan Artefak</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Bukti fisik dan digital pengerjaan murid pada LKM Fungsi Invers & Matriks, karya poster pemodelan Karhutla, serta hasil evaluasi mandiri yang menjadi dasar analisis reflektif guru.
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kajian Teori Mata Kuliah Terintegrasi</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Menerapkan prinsip <strong>PMAL (Triangulasi *Assessment as, for, and of Learning*)</strong> serta diferensiasi produk (*Multiple Means of Action & Expression*) di mana murid memvisualisasikan pemodelan matematis dalam bentuk infografis kontekstual.
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kelebihan Artefak</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Menampilkan kualitas penalaran kontekstual yang tinggi pada kelompok yang berkolaborasi aktif, serta memberikan data diagnostik autentik mengenai letak kekeliruan aritmetika/tanda aljabar murid.
+                  </p>
+                </div>
+                <div class="bg-paper-warm p-[1.25rem] border border-gray-faint">
+                  <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.1em] text-ink block mb-[0.35rem]">Kekurangan Artefak</span>
+                  <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                    Memperlihatkan adanya disparitas skor pada asesmen sumatif individu akibat ketimpangan kontribusi anggota saat pengerjaan proyek kelompok, yang menegaskan pentingnya kuis cek pemahaman individu di setiap siklus.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ========================================================================= -->
+        <!-- PANEL 3: FONDASI PPL (LK 2 OBSERVASI & LK 3 MENGAJAR TERBIMBING)          -->
+        <!-- ========================================================================= -->
+        <div id="mpanel-fondasi" class="main-tab-panel hidden space-y-[2.5rem]">
+          
+          <!-- Bagian A: LK 2 Observasi Lingkungan Belajar -->
+          <div class="bg-paper border border-gray-faint p-[1.75rem] sm:p-[2.25rem]">
+            <div class="flex flex-wrap justify-between items-start gap-[1rem] border-b border-gray-faint pb-[1.25rem] mb-[1.5rem]">
+              <div>
+                <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.14em] text-gray-mid block">Lembar Kerja 2 (13 Juli 2026)</span>
+                <h3 class="text-[1.5rem] font-extrabold text-ink mt-[0.2rem]">
+                  Observasi Lingkungan Belajar SMAN 6 Yogyakarta
+                </h3>
+              </div>
+              <a href="#GANTI-LINK-LK2" target="_blank" class="text-[0.74rem] font-bold uppercase tracking-[0.06em] bg-ink text-paper px-[1rem] py-[0.55rem]">
+                Dokumen LK 2 Observasi (PDF) ↗
+              </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.15rem] text-[0.9rem]">
+              <div class="bg-paper-warm p-[1.15rem] border border-gray-faint">
+                <span class="text-[0.65rem] font-extrabold uppercase tracking-[0.1em] text-gray-mid">01–02 · Infrastruktur & Akademik</span>
+                <p class="text-charcoal mt-[0.35rem]">Terdapat 24 ruang kelas berkondisi baik, didukung Lab Fisika, Kimia, Biologi, 3 Lab Komputer (160 PC), 2 Perpustakaan, dan 40 LCD yang sangat menunjang integrasi teknologi digital.</p>
+              </div>
+              <div class="bg-paper-warm p-[1.15rem] border border-gray-faint">
+                <span class="text-[0.65rem] font-extrabold uppercase tracking-[0.1em] text-gray-mid">03–04 · Kesehatan & Keamanan</span>
+                <p class="text-charcoal mt-[0.35rem]">Sarana sanitasi proporsional (16 toilet putra, 20 putri, 7 guru/pegawai), 1 ruang UKS yang baik, serta 40 titik CCTV dan jalur evakuasi bencana menuju titik kumpul lapangan.</p>
+              </div>
+              <div class="bg-paper-warm p-[1.15rem] border border-gray-faint">
+                <span class="text-[0.65rem] font-extrabold uppercase tracking-[0.1em] text-gray-mid">05 & 08 · Dukungan Orang Tua & Budaya</span>
+                <p class="text-charcoal mt-[0.35rem]">Keragaman latar belakang sosial-ekonomi tidak menghambat tingginya partisipasi orang tua. Budaya salam sapa pagi dan literasi memperkuat iklim sekolah yang ramah dan inklusif.</p>
+              </div>
+              <div class="bg-paper-warm p-[1.15rem] border border-gray-faint">
+                <span class="text-[0.65rem] font-extrabold uppercase tracking-[0.1em] text-gray-mid">06–07 · Kepemimpinan & Profil Murid</span>
+                <p class="text-charcoal mt-[0.35rem]">Visi-misi sekolah teraktualisasi melalui budaya riset murid (*school of research*) dan program Adiwiyata. Murid aktif, berempati, dan memiliki kemampuan awal serta gaya belajar beragam.</p>
+              </div>
+              <div class="bg-paper-warm p-[1.15rem] border border-gray-faint md:col-span-2">
+                <span class="text-[0.65rem] font-extrabold uppercase tracking-[0.1em] text-gray-mid">09–10 · Diferensiasi & Proses Pembelajaran di Kelas</span>
+                <p class="text-charcoal mt-[0.35rem]">Guru menerapkan pendekatan saintifik/konstruktivisme, membuka kelas dengan masalah kontekstual, serta memberikan pertanyaan pemantik (*scaffolding*) yang menstimulasi kemandirian bernalar dan diskusi aktif murid.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bagian B: LK 3 Refleksi Praktik Mengajar Terbimbing -->
+          <div class="bg-paper border border-gray-faint p-[1.75rem] sm:p-[2.25rem]">
+            <div class="flex flex-wrap justify-between items-start gap-[1rem] border-b border-gray-faint pb-[1.25rem] mb-[1.5rem]">
+              <div>
+                <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.14em] text-gray-mid block">Lembar Kerja 3 · Fondasi Transisi ke Mandiri</span>
+                <h3 class="text-[1.5rem] font-extrabold text-ink mt-[0.2rem]">
+                  Refleksi Praktik Mengajar Terbimbing (Relasi, Fungsi & Operasi Aljabar Fungsi)
+                </h3>
+              </div>
+              <a href="#GANTI-LINK-LK3" target="_blank" class="text-[0.74rem] font-bold uppercase tracking-[0.06em] bg-ink text-paper px-[1rem] py-[0.55rem]">
+                Dokumen LK 3 Terbimbing (PDF) ↗
+              </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-[1.5rem] text-[0.94rem]">
+              <div>
+                <h4 class="font-bold text-ink mb-[0.4rem]">Pelaksanaan Discovery Learning & SEL</h4>
+                <p class="text-charcoal leading-[1.7]">
+                  Mengintegrasikan *Deep Learning* dan *Mood Meter* (Wooclap), pemantik fungsi biaya-pendapatan, serta investigasi kelompok heterogen dengan tutor sebaya mengenai uji garis vertikal (*Vertical Line Test*), domain-kodomain-range, dan syarat domain operasi fungsi rasional/irasional.
+                </p>
+              </div>
+              <div>
+                <h4 class="font-bold text-ink mb-[0.4rem]">Evaluasi Kendala & Tindak Lanjut dari Guru Pamong</h4>
+                <p class="text-charcoal leading-[1.7]">
+                  Karena pertemuan perdana, suasana masih kaku dan *check-in* digital terasa formalitas; murid memilih diam saat bingung. Atas masukan Guru Pamong, alokasi materi dipadatkan dari 4 JP menjadi 2 JP dan pembukaan kelas diubah menjadi interaksi langsung yang lebih hangat pada Siklus Mandiri 1.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 04. REFLEKSI AKHIR & RTL ==================== -->
+    <section id="refleksi-akhir" class="px-[1.25rem] sm:px-[2rem] lg:px-[3.75rem] py-[3.5rem] sm:py-[5.5rem] bg-paper">
+      <div class="max-w-[77.5rem] mx-auto">
+        
+        <div class="mb-[2.5rem]">
+          <span class="text-[0.68rem] font-bold tracking-[0.16em] uppercase text-gray-mid block mb-[0.5rem]">
+            04 / Evaluasi Diri Menyeluruh & Pengembangan Keprofesian
+          </span>
+          <div class="w-[2.75rem] h-[0.125rem] bg-ink mb-[1.5rem]"></div>
+          <h2 class="text-[1.85rem] sm:text-[2.65rem] font-extrabold tracking-[-0.035em] text-ink">
+            Refleksi Akhir PPL Mandiri: Kekuatan, Kelemahan & Rencana Tindak Lanjut
+          </h2>
+        </div>
+
+        <!-- Kekuatan & Kelemahan Diri -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-[2rem] mb-[2.5rem]">
+          
+          <!-- Kekuatan Diri -->
+          <div class="bg-paper-warm border border-gray-faint p-[1.75rem] sm:p-[2.25rem]">
+            <span class="inline-block text-[0.65rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.6rem] py-[0.25rem] mb-[1rem]">
+              Analisis Kekuatan Diri (*Strengths*)
+            </span>
+            <ul class="space-y-[0.85rem] text-[0.95rem] text-charcoal">
+              <li class="border-b border-gray-faint pb-[0.75rem]">
+                <strong>1. Kemampuan Kontekstualisasi & Analogi Konkret:</strong> Mampu menerjemahkan materi abstrak matematika Fase F ke dalam analogi intuitif dan konteks lintas disiplin sesuai profil murid (mesin pengolahan padi-beras-nasi, enkripsi sandi rahasia, data koperasi, hingga pemodelan spasial-ekonomi Karhutla).
+              </li>
+              <li class="border-b border-gray-faint pb-[0.75rem]">
+                <strong>2. Responsivitas Reflektif Antar-Siklus:</strong> Cepat menindaklanjuti temuan kendala di kelas dan saran Guru Pamong—terbukti dari perbaikan drastis keterbacaan salindia dan desain LKM ber-*scaffolding* dari Siklus 1 ke Siklus 2 dan 3.
+              </li>
+              <li>
+                <strong>3. Pengondisian Iklim Sosial-Emosional Kelas:</strong> Konsisten membiasakan regulasi emosi melalui teknik STOP dan membangun komunikasi yang menghargai proses berpikir murid.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Kelemahan Diri -->
+          <div class="bg-paper-warm border border-gray-faint p-[1.75rem] sm:p-[2.25rem]">
+            <span class="inline-block text-[0.65rem] font-extrabold uppercase tracking-[0.12em] bg-charcoal text-paper px-[0.6rem] py-[0.25rem] mb-[1rem]">
+              Analisis Kelemahan Diri (*Areas for Improvement*)
+            </span>
+            <ul class="space-y-[0.85rem] text-[0.95rem] text-charcoal">
+              <li class="border-b border-gray-faint pb-[0.75rem]">
+                <strong>1. Pengawasan Akuntabilitas Individu dalam Kelompok:</strong> Dalam diskusi kelompok dan *tutor sebaya*, masih ditemukan celah terjadinya *pemahaman semu* (Siklus 2) dan ketimpangan beban kerja proyek poster (Siklus 4) yang merugikan perolehan nilai sumatif murid pasif.
+              </li>
+              <li class="border-b border-gray-faint pb-[0.75rem]">
+                <strong>2. Pemodelan Instruksi Teknis Aktivitas Kompleks:</strong> Pada penerapan metode dinamis seperti *Gallery Walk* (Siklus 4) atau apersepsi tabel tanpa label (Siklus 3), orientasi aturan main di awal masih perlu dimodelkan lebih eksplisit agar murid tidak bingung.
+              </li>
+              <li>
+                <strong>3. Antisipasi Ketelitian Algoritmik/Prosedural Murid:</strong> Perlu menyediakan alat bantu visual (*visual-tracing*) yang lebih rinci saat mengajarkan prosedur aljabar padat seperti perkalian matriks.
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Rencana Tindak Lanjut (RTL) Eksplisit -->
+        <div class="bg-paper border-2 border-ink p-[1.75rem] sm:p-[2.5rem]">
+          <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.14em] text-gray-mid block mb-[0.4rem]">
+            Komitmen Pengembangan Diri Berkelanjutan
+          </span>
+          <h3 class="text-[1.45rem] sm:text-[1.75rem] font-extrabold text-ink mb-[1.5rem]">
+            Rencana Tindak Lanjut (RTL) Praktik Profesional
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-[1.5rem]">
+            <div class="bg-paper-warm p-[1.35rem] border border-gray-faint">
+              <span class="text-[0.7rem] font-black uppercase tracking-[0.1em] text-ink block mb-[0.4rem]">RTL 01 · Akuntabilitas Kolaborasi</span>
+              <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                Menerapkan sintaks <strong>Think-Pair-Share (TPS) berbantuan E-Worksheet/LKM terstruktur</strong> yang mewajibkan fase berpikir individu sebelum berdiskusi, dilengkapi *individual contribution sheet*, *peer-assessment*, dan *exit ticket* mandiri 1 soal di setiap akhir kegiatan inti.
+              </p>
+            </div>
+            <div class="bg-paper-warm p-[1.35rem] border border-gray-faint">
+              <span class="text-[0.7rem] font-black uppercase tracking-[0.1em] text-ink block mb-[0.4rem]">RTL 02 · Scaffolding Visual & Inkuiri</span>
+              <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                Merancang aktivitas <strong>Guided Discovery</strong> agar murid menemukan sendiri sifat-sifat konsep matematika, sembari menyematkan panduan *visual-tracing* (kode warna dan penanda arah) serta latihan bergradasi untuk meningkatkan ketelitian prosedural aljabar.
+              </p>
+            </div>
+            <div class="bg-paper-warm p-[1.35rem] border border-gray-faint">
+              <span class="text-[0.7rem] font-black uppercase tracking-[0.1em] text-ink block mb-[0.4rem]">RTL 03 · Simulasi Instruksi & Refleksi Rutin</span>
+              <p class="text-[0.9rem] text-charcoal leading-[1.65]">
+                Menyediakan visualisasi aturan main dan simulasi singkat (*role modeling*) di salindia sebelum memulai metode pembelajaran interaktif (*Gallery Walk* / proyek), serta mendokumentasikan jurnal refleksi tertulis setiap selesai mengajar.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-paper-warm border-t border-gray-faint px-[1.25rem] sm:px-[2rem] lg:px-[3.75rem] py-[2.5rem]">
+    <div class="max-w-[77.5rem] mx-auto flex flex-col sm:flex-row justify-between items-center gap-[1rem] text-center sm:text-left">
+      <div>
+        <div class="font-extrabold text-[0.82rem] tracking-[0.08em] uppercase text-ink">
+          Rifqi Fausta Dianta — E-Portfolio PPL Mandiri (UTS & UAS)
+        </div>
+        <div class="text-[0.75rem] text-gray-mid mt-[0.2rem]">
+          Program Studi PPG Calon Guru Matematika · Universitas Sanata Dharma · SMAN 6 Yogyakarta
+        </div>
+      </div>
+      <div class="flex items-center gap-[1.25rem] text-[0.75rem] font-bold uppercase tracking-[0.06em]">
+        <a href="mailto:rifqia48@gmail.com" class="text-ink hover:underline">Email</a>
+        <a href="https://www.linkedin.com/in/rifqi-fausta-dianta-457130178/" target="_blank" rel="noopener noreferrer" class="text-ink hover:underline">LinkedIn ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT FOR TABS -->
+  <script>
+    function switchMainTab(tabKey) {
+      document.querySelectorAll('.main-tab-btn').forEach(btn => {
+        btn.classList.remove('bg-ink', 'text-paper', 'border-ink');
+        btn.classList.add('bg-paper-warm', 'text-charcoal', 'border-gray-faint');
+      });
+      const activeBtn = document.getElementById('mbtn-' + tabKey);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-ink', 'text-paper', 'border-ink');
+        activeBtn.classList.remove('bg-paper-warm', 'text-charcoal', 'border-gray-faint');
+      }
+
+      document.querySelectorAll('.main-tab-panel').forEach(panel => {
+        panel.classList.add('hidden');
+        panel.classList.remove('block');
+      });
+      const activePanel = document.getElementById('mpanel-' + tabKey);
+      if (activePanel) {
+        activePanel.classList.remove('hidden');
+        activePanel.classList.add('block');
+      }
+    }
+
+    function switchUasSubTab(subKey) {
+      document.querySelectorAll('.uas-sub-btn').forEach(btn => {
+        btn.classList.remove('bg-ink', 'text-paper', 'border-ink');
+        btn.classList.add('bg-paper', 'text-charcoal', 'border-gray-faint');
+      });
+      const activeSubBtn = document.getElementById('uasbtn-' + subKey);
+      if (activeSubBtn) {
+        activeSubBtn.classList.add('bg-ink', 'text-paper', 'border-ink');
+        activeSubBtn.classList.remove('bg-paper', 'text-charcoal', 'border-gray-faint');
+      }
+
+      document.querySelectorAll('.uas-sub-panel').forEach(panel => {
+        panel.classList.add('hidden');
+        panel.classList.remove('block');
+      });
+      const activeSubPanel = document.getElementById('uaspanel-' + subKey);
+      if (activeSubPanel) {
+        activeSubPanel.classList.remove('hidden');
+        activeSubPanel.classList.add('block');
+      }
+    }
+  </script>
+</body>
+</html>
